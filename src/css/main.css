@@ -1,0 +1,319 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font: 14px/20px "Lato", Arial, sans-serif;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    /* border: 2px solid orange; */
+}
+.outerDiv {
+    margin: auto;
+    width: 880px;
+    height: 100%;
+    padding: 10px;
+    /* width: 100vw; */
+    /* padding: 20px; */
+}
+.navigation {
+    width: 100%;
+    height: 19%;
+    padding: 5px;
+    background-color: #24252a;
+    display: flex;
+    justify-content: space-between;
+    /* position: relative; */
+}
+.appName {
+    /* float: left; */
+    /* margin: 20px; */
+    margin: 0;
+    margin-left: 7%;
+    font-size: 40px;
+    color: #edf0f1;
+    align-self: center;
+}
+.userContainer {
+    display: flex;
+}
+.userVert {
+    align-self: center;
+    color: wheat;
+    margin-left: 2%;
+    margin-right: 20px;
+    cursor: pointer;
+}
+.sendRequestButton {
+    color: wheat;
+    margin: 25px 10px;
+    align-self: flex-end;
+    cursor: pointer;
+    /* float: right; */
+    /* margin: 20px; */
+    /* position: relative; */
+    /* bottom: 50px; */
+    /* top: 60px; */
+    /* right: 10px; */
+}
+
+.user {
+    /* float: right; */
+    /* width: 200px; */
+    padding: 7px;
+    margin: 10px 20px;
+    border: 2px #0088a9 solid;
+    border-radius: 10px;
+    color: white;
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: ; */
+}
+.mobileDialogBox {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+#root {
+    width: 100%;
+    height: 100%;
+}
+.primaryContainer {
+    width: 100%;
+    height: 100%;
+}
+.user button {
+    background-color: rgba(0, 136, 169, 1);
+    border: none;
+    /* height: ; */
+    outline: none;
+    border-radius: 5px;
+    font-weight: 600;
+    height: 25px;
+    width: 60px;
+    align-self: flex-end;
+}
+.user div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.user h5 {
+    /* color:  */
+    margin: 0;
+}
+.user p {
+    margin: 0;
+    margin-bottom: 5px;
+}
+/* .navigation::after {
+    content: "";
+    display: block;
+    clear: both;
+} */
+.mainContainer {
+    /* width: 70%; */
+    height: 81%;
+    margin: auto;
+    /* display: grid;
+    grid-template-columns: 35% 65%;
+    grid-auto-rows: 81%; */
+    display: flex;
+}
+
+.listNames {
+    padding: 10px 30px;
+    width: 100%;
+    color: white;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    /* height: 50px; */
+}
+.listNames:hover {
+    background-color: #52555e;
+}
+.img {
+    height: 50px;
+    width: 50px;
+    background-color: white;
+    display: block;
+    margin-right: 15px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+.listNames h5 {
+    margin: 0;
+    align-self: flex-start;
+    margin-top: 7px;
+    font-size: 18px;
+    font-weight: 100;
+}
+.listNames > div {
+    /* width: 100px; */
+    width: inherit;
+    align-self: flex-start;
+    /* border-bottom: 1px solid #60636c; */
+    /* padding-top: 10px; */
+    word-wrap: break-word;
+    overflow: hidden;
+}
+.listNames .chatContainer {
+    height: 50px;
+}
+.listNames .rqstcontainer h5 {
+    margin-top: 12px;
+}
+.listNames .rqstcontainer {
+    border-bottom: 1px solid #60636c;
+}
+.listNames .requestBox {
+    margin-top: 7px;
+    padding-left: 30px;
+    padding-bottom: 8px;
+    height: 40px;
+    /* padding-right: 20px; */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.listNames .requestBox .accept,
+.listNames .requestBox .delete {
+    width: 40px;
+    font-size: 18px;
+}
+.listNames .requestBox .accept {
+    color: limegreen;
+}
+.listNames .requestBox .accept:hover {
+    filter: drop-shadow(0 0 8px rgb(109, 240, 109));
+}
+.listNames .requestBox .delete {
+    color: tomato;
+}
+.listNames .requestBox .delete:hover {
+    filter: drop-shadow(0 0 8px rgb(252, 142, 123));
+}
+.tablinks {
+    border: none;
+    font-size: 15px;
+    outline: none;
+}
+.tablinks:focus {
+    outline: none;
+}
+.tablinks:hover {
+    background-color: #ddd;
+}
+.tabContainer .active {
+    background-color: #ccc;
+}
+.activeChat {
+    background-color: #60636c;
+}
+.friendsContainer {
+    /* display: block; */
+    height: 100%;
+    width: 35%;
+    background-color: #42454e;
+    display: grid;
+    grid-template-rows: 45px auto;
+}
+.tabContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    /* height: 9%; */
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+}
+.chatlist {
+    /* height: 91%; */
+    overflow-y: scroll;
+}
+.friendlist {
+    overflow-y: scroll;
+    /* height: max-content; */
+    /* height: 91%; */
+}
+.requestlist {
+    /* height: 91%; */
+    overflow-y: scroll;
+}
+.window {
+    /* display: block; */
+    height: 100%;
+    width: 65%;
+    background-color: #ccc;
+}
+/* .facoffe {
+    color: ivory;
+    font-size: 50px;
+} */
+@media only screen and (max-width: 880px) {
+    .navigation {
+        /* width: 100%;
+        padding: 5px;
+        background-color: #24252a;
+        display: flex;
+        justify-content: space-between; */
+        height: 12%;
+    }
+    .mainContainer {
+        height: 88%;
+        display: block;
+        margin: 0;
+    }
+    .friendsContainer {
+        height: 100%;
+        width: 100%;
+        /* grid-template-rows: 45px auto; */
+    }
+    .window {
+        /* display: block; */
+        height: 100%;
+        width: 100%;
+    }
+    .outerDiv {
+        width: 100%;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        /* width: 100vw; */
+        /* padding: 20px; */
+    }
+    .sendRequestButton {
+        align-self: center;
+    }
+    .appName {
+        /* margin: 20px;
+        margin-left: 7%;
+        font-size: 40px;
+        color: #edf0f1;
+        align-self: center; */
+        font-size: 30px;
+    }
+    .listNames .requestBox {
+        padding-left: 80px;
+    }
+    .listNames .chatContainer {
+        height: 50px;
+    }
+    .listNames > div {
+        /* width: inherit;
+        align-self: flex-start; */
+        border-bottom: 1px solid #60636c;
+    }
+}
+@media only screen and (max-height: 450px) {
+    .navigation {
+        height: 15%;
+    }
+    .mainContainer {
+        height: 85%;
+    }
+}
